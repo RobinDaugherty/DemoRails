@@ -4,4 +4,12 @@ class ApplicationJob < ActiveJob::Base
 
   # Most jobs are safe to ignore if the underlying records are no longer available
   # discard_on ActiveJob::DeserializationError
+  # retry_on ActiveRecord::Deadlocked
+
+  def help
+    a = 1
+    b = 2
+    c = 42
+    a + b + c
+  end
 end
